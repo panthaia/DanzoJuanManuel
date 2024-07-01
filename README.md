@@ -117,4 +117,4 @@ Crear un servicio que ofrezca alquiler de espacios de trabajo y préstamo de ins
 
 <h2 align="left">Enlace Útiles</h2>
 <h4 align="left">Para acceder al codigo SQL de la base de datos y las tablas haz <a href="https://github.com/panthaia/primerEntregaCoder/blob/main/primerEntregaProyectoAlquierInsumosIT.sql" target="_blank">clic aquí</a>.</h4>
-<h4 align="left">Para acceder a la presentación en PDF haz <a href="https://github.com/panthaia/primerEntregaCoder/blob/main/primerEntregaProyectoAlquierInsumosIT.sql" target="_blank">clic aquí</a>.</h4>
+<h4 align="left">Para acceder a la presentación en PDF haz <a href="https://github.com/panthaia/primerEntregaCoder/src/DanzoJuanManuel.pptx" target="_blank">clic aquí</a>.</h4>
