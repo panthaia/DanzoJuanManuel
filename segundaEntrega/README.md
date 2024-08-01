@@ -277,4 +277,4 @@ El objetivo de este trigger es similar al anterior, poder tener el estado de las
 Tablas involucradas resgistro_estado_facturas, pagos y facturas.
 
 <h2 align="left">Enlace Útiles</h2>
-<h4 align="left">Para acceder al codigo SQL de los inserts haz <a href="https://github.com/panthaia/DanzoJuanManuel/segundaEntrega/segundaEntregaProyectoAlquilerInsumosIT.sql" target="_blank">clic aquí</a>.</h4>
+<h4 align="left">Para acceder al codigo SQL de los inserts haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/segundaEntrega/segundaEntregaProyectoAlquilerInsumosIT.sql" target="_blank">clic aquí</a>.</h4>
