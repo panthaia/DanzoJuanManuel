@@ -114,6 +114,11 @@ Crear un servicio que ofrezca alquiler de espacios de trabajo y préstamo de ins
 <img src="img/tablacategorias2.png">
 </p>
 
+<h3 align="center">Tabla Registros Estado de Factura</h3>
+<p align="center">
+<img src="img/registrosEstado1.png">
+</p>
+
 <h2 align="left">DER</h2>
 <p align="center">
 <img src="img/der.png">
@@ -381,6 +386,25 @@ DELIMITER ;
 El objetivo de este trigger es similar al anterior, poder tener el estado de las facturas actualizado dependiendo de los datos que se ingresen de las facturas, este trigger una ves registrado un pago realiza el calculo del total del monto pagado por usuario para una factura, y en caso de ser el monto pagado igual que el monto de la factura, el estado se modifica a PAGADO, si el monto pagado es menor al monto de la factura se modifica el monto a PAGO_PARCIAL y en caso de que no exista un registro de estado y se realice el pago se inserta el dato nuevo teniendo en cuenta las comparaciones anterior, monto iguales es PAGADO y monto de pago menor a monto de facturas es PAGO_PARCIAL.
 
 Tablas involucradas resgistro_estado_facturas, pagos y facturas.
+
+<h3 align="left">Registrar backup de reservas eliminadas: </h3>
+
+```SQL
+DELIMITER $$
+
+CREATE TRIGGER tr_bk_hist_reservas
+AFTER DELETE ON reservas
+FOR EACH ROW
+BEGIN
+    INSERT INTO hist_reservas_eliminadas
+    VALUES (OLD.id_reserva, old.id_usuario, old.id_espacio, old.fecha, old.fecha_fin);
+END $$
+
+DELIMITER ;
+```
+El objetivo de este trigger tener un backup de las reservas que se eliminaron para no sobrecargar la tabla principal y guardar las reservas viejas en una tabla satelite.
+
+Tablas involucradas reservas.
 
 
 <h2 align="left">Enlace Útiles</h2>

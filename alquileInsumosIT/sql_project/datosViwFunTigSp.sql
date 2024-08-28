@@ -782,6 +782,27 @@ SELECT función_diferencia_pago(3) as SALIDA; -- llamado con factura impaga y sa
 SELECT función_diferencia_pago(8) as SALIDA; -- llamado con factura pagada y saldo a favor
 SELECT función_diferencia_pago(12) as SALIDA; -- llamado con pago parcial y saldo deudor. 
 
+-- creo una tabla para guardar el backup cuando se eliminen las reservas
+CREATE TABLE hist_reservas_eliminadas
+(
+	id_reserva int,
+	id_usuario int,
+	id_espacio int,
+	fecha date,
+	fecha_fin date
+);
 
+-- creo el trigger que va a guardar el registro eliminado en la tabla de backup
+DELIMITER $$
+
+CREATE TRIGGER tr_bk_hist_reservas
+AFTER DELETE ON reservas
+FOR EACH ROW
+BEGIN
+    INSERT INTO hist_reservas_eliminadas
+    VALUES (OLD.id_reserva, old.id_usuario, old.id_espacio, old.fecha, old.fecha_fin);
+END $$
+
+DELIMITER ;
 
 
