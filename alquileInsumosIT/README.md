@@ -1,6 +1,6 @@
 <h1 align="center">Alquiler de insumos/mobiliario para IT</h1>
 
-<h3 align="center">Projecto Final</h3>
+<h3 align="center">Proyecto Final</h3>
 
 <p align="center" >
 <img src="img/banner.jpg" width="480" height="380">
