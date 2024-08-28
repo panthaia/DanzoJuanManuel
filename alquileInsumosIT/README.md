@@ -427,6 +427,23 @@ El objetivo de este trigger tener un backup de las reservas que se eliminaron pa
 
 Tablas involucradas reservas.
 
+<h2 align="left">ROLES</h2>
+
+<h3 align="left">Rol de Marketing: </h3>
+
+```SQL
+create role 'mktRol';
+
+grant SELECT on alq_mobiliario_it.vista_factura_usuario to 'mktRol';
+grant SELECT on alq_mobiliario_it.vista_ingresos_mensuales to 'mktRol';
+grant SELECT on alq_mobiliario_it.vista_monto_insumos_prestados to 'mktRol';
+
+create user 'mktUser'@'localhost' identified by 'pass123';
+
+grant mktRol to 'mktUser'@'localhost';
+```
+El objetivo de este rol es permitir a la gente de marketing que puedan consultar las vistas, para obtener datos de la BD sin que intervengan en otros objetos de la BD.
+
 
 <h2 align="left">Enlace Útiles</h2>
 <h4 align="left">Para acceder al codigo SQL de la base de datos y las tablas haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/primerEntregaProyectoAlquierInsumosIT.sql" target="_blank">clic aquí</a>.</h4>

@@ -819,3 +819,15 @@ group by
 	mes, anio
 order by mes desc, anio desc;
 
+-- creo un usuario y un rol de marketing que solo tiene acceso y permiso de select sobre las vistas.
+
+create role 'mktRol';
+
+grant SELECT on alq_mobiliario_it.vista_factura_usuario to 'mktRol';
+grant SELECT on alq_mobiliario_it.vista_ingresos_mensuales to 'mktRol';
+grant SELECT on alq_mobiliario_it.vista_monto_insumos_prestados to 'mktRol';
+
+create user 'mktUser'@'localhost' identified by 'pass123';
+
+grant mktRol to 'mktUser'@'localhost';
+
