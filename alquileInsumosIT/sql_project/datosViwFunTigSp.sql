@@ -805,4 +805,17 @@ END $$
 
 DELIMITER ;
 
+-- Creo una vista que me permita obtener los ingresos mensuales de todos los pagos agrupados por mes y año
+DROP VIEW IF EXISTS vista_ingresos_mensuales;
+
+create view vista_ingresos_mensuales as
+select
+	SUM(monto) as total,
+	month(fecha_pago) as mes,
+	year(fecha_pago) as anio
+from
+	pagos u
+group by
+	mes, anio
+order by mes desc, anio desc;
 

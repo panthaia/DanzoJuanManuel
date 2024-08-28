@@ -169,6 +169,27 @@ El objetivo de esta vista es mostrar las facturas de los alquileres que realizo 
 
 Las tablas que componen esta vista son, Usuarios, Alquileres y Facturas.
 
+<h3 align="left">Ingresos mensuales:</h3>
+
+```SQL
+create view vista_ingresos_mensuales as
+select
+	SUM(monto) as total,
+	month(fecha_pago) as mes,
+	year(fecha_pago) as anio
+from
+	pagos u
+group by
+	mes, anio
+order by mes desc, anio desc;
+```
+
+Vista que agrupo los ingresos totales mensuales de los pagos realizados.
+
+El objetivo de esta vista es mostrar los ingresos totales que hay por mes de los pagos que se hacen por los usuarios, los mismos se muestran por mes y año agrupados.
+
+La tabla que compone esta vista es Pagos.
+
 <h2 align="left">Funciones</h2>
 
 <h3 align="left">Función diferencia en los pagos: </h3>
