@@ -446,5 +446,7 @@ El objetivo de este rol es permitir a la gente de marketing que puedan consultar
 
 
 <h2 align="left">Enlace Útiles</h2>
-<h4 align="left">Para acceder al codigo SQL de la base de datos y las tablas haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/primerEntregaProyectoAlquierInsumosIT.sql" target="_blank">clic aquí</a>.</h4>
-<h4 align="left">Para acceder a la presentación en PPT haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/DanzoJuanManuel.pptx" target="_blank">clic aquí</a>.</h4>
+<h4 align="left">Para acceder al codigo SQL de la base de datos y las tablas haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/alquileInsumosIT/sql_project/estructura.sql" target="_blank">clic aquí</a>.</h4>
+<h4 align="left">Para acceder al codigo SQL de la inserción de datos, funciones, triggers, funciones, procedures y roles haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/alquileInsumosIT/sql_project/estructura.sql" target="_blank">clic aquí</a>.</h4>
+<h4 align="left">Para acceder al codigo SQL del backup haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/alquileInsumosIT/sql_backup/dump-alq_mobiliario_it-202408272228.sql">clic aquí</a>.</h4>
+<h4 align="left">Para acceder a la presentación en PPT haz <a href="https://github.com/panthaia/DanzoJuanManuel/blob/main/alquileInsumosIT/DanzoJuanManuel.pptx" target="_blank">clic aquí</a>.</h4>
